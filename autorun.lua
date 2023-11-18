@@ -1,8 +1,7 @@
-print("1111111111111111111")
-print("1111111111111111111")
-print("1111111111111111111")
-print("1111111111111111111")
-wait(1)
+repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 local cards = {}
 cards = {
 	"Enemy Shield III",
@@ -59,8 +58,3 @@ game.Players.LocalPlayer.PlayerGui.RoguelikeSelect:GetPropertyChangedSignal("Ena
 		end
 	end
 end)
-
-print("1111111111111111111")
-print("1111111111111111111")
-print("1111111111111111111")
-print("1111111111111111111")
