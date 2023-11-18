@@ -3,8 +3,8 @@ print("1111111111111111111")
 print("1111111111111111111")
 print("1111111111111111111")
 wait(1)
-local getgenv().cards = {}
-getgenv().cards = {
+local cards = {}
+cards = {
 	"Enemy Shield III",
 	"Enemy Health III", 
 	"Enemy Speed III",
@@ -38,9 +38,9 @@ game.Players.LocalPlayer.PlayerGui.RoguelikeSelect:GetPropertyChangedSignal("Ena
 		for Priority = 1, 25 do
 			for i, v in pairs(game.Players.LocalPlayer.PlayerGui.RoguelikeSelect.Main.Main.Items:GetChildren()) do
 				if v.Name == "OptionFrame" then
-					if v.bg.Main.Title.TextLabel.Text == getgenv().cards[Priority] then
+					if v.bg.Main.Title.TextLabel.Text == cards[Priority] then
 						found = true
-						print(getgenv().cards[Priority])
+						print(cards[Priority])
 						local args = {
 							[1] = i
 						}
@@ -49,7 +49,7 @@ game.Players.LocalPlayer.PlayerGui.RoguelikeSelect:GetPropertyChangedSignal("Ena
 
 						break
 					end
-					print("outside", getgenv().cards[Priority])
+					print("outside", cards[Priority])
 				end
 			end
 			if found == true then
